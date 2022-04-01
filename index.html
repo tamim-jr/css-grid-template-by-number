@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Telplate in css Grid</title>
+    <style>
+        .container div {
+            border: 2px solid green;
+            text-align: center;
+        }
+
+        .container {
+            height: 100vh;
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: 50px auto 50px;
+        }
+
+        .head {
+            grid-column: 2 / -1;
+        }
+
+        .menu {
+            grid-row: 1 / 3;
+        }
+        .content{
+            /* height: 100vh; */
+            grid-column: 2 / -1;
+        }
+        .footer {
+            grid-column: 1 / -1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="head">Header</div>
+        <div class="menu">Menu</div>
+        <div class="content">Contant</div>
+        <div class="footer">Footer</div>
+    </div>
+</body>
+
+</html>
